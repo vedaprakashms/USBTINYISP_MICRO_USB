@@ -1,0 +1,449 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "USBtiny_ISP_MICROUSB"
+Date "2020-06-28"
+Rev "1"
+Comp "vedaprakash.ms@outlook.com"
+Comment1 "Influenced by FabISP"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 7060 4630 0    157  ~ 31
+MICRO USB Connection part
+Wire Notes Line
+	11220 4330 6300 4330
+Wire Notes Line
+	11222 2362 6300 2362
+Wire Notes Line
+	6300 470  6300 7800
+Text Notes 7650 2660 0    157  ~ 31
+ISP connection part
+Text Notes 7310 770  0    157  ~ 31
+USB Auto Detection part
+Text Notes 1600 820  0    157  ~ 31
+ATTINY24/44/84 connection part
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5EF8C89D
+P 6710 5690
+F 0 "J1" H 6767 6157 50  0000 C CNN
+F 1 "USB_B_Micro" H 6767 6066 50  0000 C CNN
+F 2 "" H 6860 5640 50  0001 C CNN
+F 3 "~" H 6860 5640 50  0001 C CNN
+	1    6710 5690
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5EF8E156
+P 6650 6190
+F 0 "#PWR03" H 6650 5940 50  0001 C CNN
+F 1 "GND" H 6655 6017 50  0000 C CNN
+F 2 "" H 6650 6190 50  0001 C CNN
+F 3 "" H 6650 6190 50  0001 C CNN
+	1    6650 6190
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5EF8EE28
+P 3690 4630
+F 0 "R2" H 3758 4676 50  0000 L CNN
+F 1 "10k" H 3758 4585 50  0000 L CNN
+F 2 "" V 3730 4620 50  0001 C CNN
+F 3 "~" H 3690 4630 50  0001 C CNN
+	1    3690 4630
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5EF9045C
+P 3920 3890
+F 0 "C1" V 3760 3880 50  0000 C CNN
+F 1 "18pf" V 3820 3900 50  0000 C CNN
+F 2 "" H 3920 3890 50  0001 C CNN
+F 3 "~" H 3920 3890 50  0001 C CNN
+	1    3920 3890
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Crystal_Small Y1
+U 1 1 5EF915AA
+P 3820 3990
+F 0 "Y1" V 3820 3940 50  0000 L CNN
+F 1 "12MHZ" H 3560 3890 50  0000 L CNN
+F 2 "" H 3820 3990 50  0001 C CNN
+F 3 "~" H 3820 3990 50  0001 C CNN
+	1    3820 3990
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6610 6090 6650 6090
+Wire Wire Line
+	6650 6190 6650 6090
+Connection ~ 6650 6090
+Wire Wire Line
+	6650 6090 6710 6090
+Wire Wire Line
+	7010 5490 7290 5490
+$Comp
+L Device:D_Zener_Small D2
+U 1 1 5EF9208F
+P 7950 5790
+F 0 "D2" V 7904 5860 50  0000 L CNN
+F 1 "3v3" V 7995 5860 50  0000 L CNN
+F 2 "" V 7950 5790 50  0001 C CNN
+F 3 "~" V 7950 5790 50  0001 C CNN
+	1    7950 5790
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5EF92A54
+P 7680 5790
+F 0 "R4" V 7475 5790 50  0000 C CNN
+F 1 "68" V 7566 5790 50  0000 C CNN
+F 2 "" V 7720 5780 50  0001 C CNN
+F 3 "~" H 7680 5790 50  0001 C CNN
+	1    7680 5790
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 5EF9363C
+P 8170 5690
+F 0 "R5" V 7965 5690 50  0000 C CNN
+F 1 "68" V 8056 5690 50  0000 C CNN
+F 2 "" V 8210 5680 50  0001 C CNN
+F 3 "~" H 8170 5690 50  0001 C CNN
+	1    8170 5690
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7010 5690 7950 5690
+Wire Wire Line
+	7010 5790 7290 5790
+Wire Wire Line
+	8320 5690 8580 5690
+Wire Wire Line
+	7830 5790 8580 5790
+$Comp
+L Device:D_Zener_Small D1
+U 1 1 5EF95067
+P 7290 5890
+F 0 "D1" V 7244 5960 50  0000 L CNN
+F 1 "3v3" V 7335 5960 50  0000 L CNN
+F 2 "" V 7290 5890 50  0001 C CNN
+F 3 "~" V 7290 5890 50  0001 C CNN
+	1    7290 5890
+	0    1    1    0   
+$EndComp
+Connection ~ 7290 5790
+Wire Wire Line
+	7290 5790 7530 5790
+Connection ~ 7950 5690
+Wire Wire Line
+	7950 5690 8020 5690
+$Comp
+L power:GND #PWR04
+U 1 1 5EF960C8
+P 7290 5990
+F 0 "#PWR04" H 7290 5740 50  0001 C CNN
+F 1 "GND" H 7295 5817 50  0000 C CNN
+F 2 "" H 7290 5990 50  0001 C CNN
+F 3 "" H 7290 5990 50  0001 C CNN
+	1    7290 5990
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5EF9677B
+P 7950 5890
+F 0 "#PWR07" H 7950 5640 50  0001 C CNN
+F 1 "GND" H 7955 5717 50  0000 C CNN
+F 2 "" H 7950 5890 50  0001 C CNN
+F 3 "" H 7950 5890 50  0001 C CNN
+	1    7950 5890
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5EF96EA8
+P 7290 5640
+F 0 "R3" H 7358 5686 50  0000 L CNN
+F 1 "1.5k" H 7358 5595 50  0000 L CNN
+F 2 "" V 7330 5630 50  0001 C CNN
+F 3 "~" H 7290 5640 50  0001 C CNN
+	1    7290 5640
+	1    0    0    -1  
+$EndComp
+Connection ~ 7290 5490
+Wire Wire Line
+	7290 5490 7500 5490
+$Comp
+L MCU_Microchip_ATtiny:ATtiny84-20PU U1
+U 1 1 5EF9B48D
+P 2900 3630
+F 0 "U1" H 2371 3676 50  0000 R CNN
+F 1 "ATtiny84-20PU" H 2371 3585 50  0000 R CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 2900 3630 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8006.pdf" H 2900 3630 50  0001 C CNN
+	1    2900 3630
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AVR-ISP-6 J2
+U 1 1 5EF9C4B8
+P 7410 3460
+F 0 "J2" H 7081 3556 50  0000 R CNN
+F 1 "AVR-ISP-6" H 7081 3465 50  0000 R CNN
+F 2 "" V 7160 3510 50  0001 C CNN
+F 3 " ~" H 6135 2910 50  0001 C CNN
+	1    7410 3460
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5EF9D5A3
+P 7670 1530
+F 0 "C3" H 7480 1580 50  0000 L CNN
+F 1 "0.1uf" H 7350 1470 50  0000 L CNN
+F 2 "" H 7670 1530 50  0001 C CNN
+F 3 "~" H 7670 1530 50  0001 C CNN
+	1    7670 1530
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5EF9DD27
+P 7830 1530
+F 0 "C4" H 7922 1576 50  0000 L CNN
+F 1 "10uf" H 7922 1485 50  0000 L CNN
+F 2 "" H 7830 1530 50  0001 C CNN
+F 3 "~" H 7830 1530 50  0001 C CNN
+	1    7830 1530
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5EF9ED1A
+P 7740 1690
+F 0 "#PWR06" H 7740 1440 50  0001 C CNN
+F 1 "GND" H 7745 1517 50  0000 C CNN
+F 2 "" H 7740 1690 50  0001 C CNN
+F 3 "" H 7740 1690 50  0001 C CNN
+	1    7740 1690
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5EF9F648
+P 7310 3860
+F 0 "#PWR05" H 7310 3610 50  0001 C CNN
+F 1 "GND" H 7315 3687 50  0000 C CNN
+F 2 "" H 7310 3860 50  0001 C CNN
+F 3 "" H 7310 3860 50  0001 C CNN
+	1    7310 3860
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5EFA24BA
+P 3920 4090
+F 0 "C2" V 4090 4090 50  0000 C CNN
+F 1 "18pf" V 4010 4120 50  0000 C CNN
+F 2 "" H 3920 4090 50  0001 C CNN
+F 3 "~" H 3920 4090 50  0001 C CNN
+	1    3920 4090
+	0    1    1    0   
+$EndComp
+Text Label 7500 5490 0    39   ~ 8
+VCC
+Text Label 8580 5690 0    39   ~ 8
+D+
+Text Label 8580 5790 0    39   ~ 8
+D-
+Wire Wire Line
+	7670 1430 7750 1430
+Wire Wire Line
+	7670 1630 7740 1630
+Wire Wire Line
+	7740 1690 7740 1630
+Connection ~ 7740 1630
+Wire Wire Line
+	7740 1630 7830 1630
+Wire Wire Line
+	7750 1430 7750 1370
+Connection ~ 7750 1430
+Wire Wire Line
+	7750 1430 7830 1430
+Text Label 7750 1370 0    39   ~ 8
+VCC
+Wire Wire Line
+	3500 3930 3570 3930
+Wire Wire Line
+	3570 3930 3570 3890
+Wire Wire Line
+	3570 3890 3820 3890
+Connection ~ 3820 3890
+Wire Wire Line
+	3820 4090 3570 4090
+Wire Wire Line
+	3570 4090 3570 4030
+Wire Wire Line
+	3570 4030 3500 4030
+Connection ~ 3820 4090
+Wire Wire Line
+	4020 3890 4020 3980
+Wire Wire Line
+	4020 3980 4100 3980
+Connection ~ 4020 3980
+Wire Wire Line
+	4020 3980 4020 4090
+$Comp
+L power:GND #PWR02
+U 1 1 5EFA76FA
+P 4100 3980
+F 0 "#PWR02" H 4100 3730 50  0001 C CNN
+F 1 "GND" V 4105 3852 50  0000 R CNN
+F 2 "" H 4100 3980 50  0001 C CNN
+F 3 "" H 4100 3980 50  0001 C CNN
+	1    4100 3980
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5EFA85C0
+P 2900 4530
+F 0 "#PWR01" H 2900 4280 50  0001 C CNN
+F 1 "GND" H 2905 4357 50  0000 C CNN
+F 2 "" H 2900 4530 50  0001 C CNN
+F 3 "" H 2900 4530 50  0001 C CNN
+	1    2900 4530
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7310 2960 7310 2890
+Wire Wire Line
+	7810 3260 7890 3260
+Wire Wire Line
+	7810 3360 7890 3360
+Wire Wire Line
+	7810 3460 7890 3460
+Wire Wire Line
+	7810 3560 7890 3560
+Wire Wire Line
+	2900 2730 2900 2600
+Text Label 2900 2600 0    39   ~ 8
+VCC
+$Comp
+L Device:Jumper_NC_Small JP2
+U 1 1 5EFABD71
+P 7210 2890
+F 0 "JP2" H 7210 3102 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 7210 3011 50  0000 C CNN
+F 2 "" H 7210 2890 50  0001 C CNN
+F 3 "~" H 7210 2890 50  0001 C CNN
+	1    7210 2890
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7110 2890 7000 2890
+Text Label 7000 2890 0    39   ~ 8
+VCC
+Wire Wire Line
+	3500 4230 3550 4230
+Wire Wire Line
+	3550 4230 3550 4320
+Wire Wire Line
+	3550 4320 3690 4320
+Wire Wire Line
+	3690 4320 3690 4480
+Connection ~ 3550 4320
+Wire Wire Line
+	3550 4320 3550 4480
+Wire Wire Line
+	3690 4780 3690 4900
+Text Label 3690 4900 0    39   ~ 8
+VCC
+$Comp
+L Device:Jumper_NC_Small JP1
+U 1 1 5EFB08D4
+P 3550 4580
+F 0 "JP1" H 3580 4730 50  0000 R CNN
+F 1 "Jumper_NC_Small" H 3800 4670 50  0000 R CNN
+F 2 "" H 3550 4580 50  0001 C CNN
+F 3 "~" H 3550 4580 50  0001 C CNN
+	1    3550 4580
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3500 3030 3750 3030
+Wire Wire Line
+	3500 3330 3750 3330
+Wire Wire Line
+	3500 3430 3750 3430
+Wire Wire Line
+	3500 3530 3750 3530
+Wire Wire Line
+	3500 3630 3750 3630
+Wire Wire Line
+	3500 3730 3760 3730
+Wire Wire Line
+	3760 3730 3760 3670
+Wire Wire Line
+	3760 3670 4130 3670
+Wire Wire Line
+	3500 4130 3610 4130
+Wire Wire Line
+	3610 4130 3610 4300
+Wire Wire Line
+	3610 4300 4220 4300
+Wire Wire Line
+	3550 4680 3550 4890
+$Comp
+L Device:R_US R1
+U 1 1 5EFBE903
+P 3550 5040
+F 0 "R1" H 3618 5086 50  0000 L CNN
+F 1 "0" H 3618 4995 50  0000 L CNN
+F 2 "" V 3590 5030 50  0001 C CNN
+F 3 "~" H 3550 5040 50  0001 C CNN
+	1    3550 5040
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 5190 3670 5190
+Text Label 3670 5190 0    39   ~ 8
+RST
+Text Label 4220 4300 0    39   ~ 8
+D+
+Text Label 4130 3670 0    39   ~ 8
+D+
+Text Label 3750 3630 0    39   ~ 8
+MOSI
+Text Label 3750 3530 0    39   ~ 8
+MISO
+Text Label 3750 3430 0    39   ~ 8
+SCK
+Text Label 3750 3330 0    39   ~ 8
+RST
+Text Label 3750 3030 0    39   ~ 8
+D-
+NoConn ~ 3500 3130
+NoConn ~ 3500 3230
+Text Label 7890 3260 0    39   ~ 8
+MISO
+Text Label 7890 3360 0    39   ~ 8
+MOSI
+Text Label 7890 3460 0    39   ~ 8
+SCK
+Text Label 7890 3560 0    39   ~ 8
+RST
+NoConn ~ 7010 5890
+$EndSCHEMATC
