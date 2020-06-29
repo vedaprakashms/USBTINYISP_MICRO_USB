@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ved)(type KiCad)(uri ${KIPRJMOD}/ved.pretty)(options "")(descr ""))
+)
